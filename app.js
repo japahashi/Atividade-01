@@ -39,7 +39,11 @@ entradaDeDados.question("Digite o seu nome: ", function(nome){
                         }else if(isNaN(valor) + isNaN(taxa) + isNaN(tempo)){
                         console.log("ERRO: SOMENTE NUMEROS SÃO PERMITIDOS NOS CAMPOS!!! ")
 
-                        }else if(opcao == 1){
+                        }else if(opcaoDeCompra != 1 && opcaoDeCompra != 2){
+                            console.log("ERRO: ESTA OPÇÃO NÃO É VÁLIDA")
+
+                        }
+                        else if(opcao == 1){
 
                             let montante = Number(valor) * (1 + Number(taxa/100)) ** Number(tempo)
 
